@@ -1,0 +1,21 @@
+<section class="detail" id="try/1">
+<pre><code class="makeup elixir" translate="no"><span class="k">try</span><span class="w"> </span><span class="k" data-group-id="6322899654-1">do</span><span class="w">
+  </span><span class="n">do_something_that_may_fail</span><span class="p" data-group-id="6322899654-2">(</span><span class="n">some_arg</span><span class="p" data-group-id="6322899654-2">)</span><span class="w">
+</span><span class="k" data-group-id="6322899654-1">rescue</span><span class="w">
+  </span><span class="nc">ArgumentError</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+    </span><span class="nc">IO</span><span class="o">.</span><span class="n">puts</span><span class="p" data-group-id="6322899654-3">(</span><span class="s">"Invalid argument given"</span><span class="p" data-group-id="6322899654-3">)</span><span class="w">
+</span><span class="k" data-group-id="6322899654-1">catch</span><span class="w">
+  </span><span class="n">value</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+    </span><span class="nc">IO</span><span class="o">.</span><span class="n">puts</span><span class="p" data-group-id="6322899654-4">(</span><span class="s">"Caught </span><span class="si" data-group-id="6322899654-5">#{</span><span class="n">inspect</span><span class="p" data-group-id="6322899654-6">(</span><span class="n">value</span><span class="p" data-group-id="6322899654-6">)</span><span class="si" data-group-id="6322899654-5">}</span><span class="s">"</span><span class="p" data-group-id="6322899654-4">)</span><span class="w">
+</span><span class="k" data-group-id="6322899654-1">else</span><span class="w">
+  </span><span class="n">value</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+    </span><span class="nc">IO</span><span class="o">.</span><span class="n">puts</span><span class="p" data-group-id="6322899654-7">(</span><span class="s">"Success! The result was </span><span class="si" data-group-id="6322899654-8">#{</span><span class="n">inspect</span><span class="p" data-group-id="6322899654-9">(</span><span class="n">value</span><span class="p" data-group-id="6322899654-9">)</span><span class="si" data-group-id="6322899654-8">}</span><span class="s">"</span><span class="p" data-group-id="6322899654-7">)</span><span class="w">
+</span><span class="k" data-group-id="6322899654-1">after</span><span class="w">
+  </span><span class="nc">IO</span><span class="o">.</span><span class="n">puts</span><span class="p" data-group-id="6322899654-10">(</span><span class="s">"This is printed regardless if it failed or succeeded"</span><span class="p" data-group-id="6322899654-10">)</span><span class="w">
+</span><span class="k" data-group-id="6322899654-1">end</span></code></pre><p>The <code class="inline">{{c1::rescue}}</code> clause is used to {{c2::handle exceptions}} while the <code class="inline">{{c1::catch}}</code>
+clause can be used to {{c2::catch thrown values and exits}}.
+The <code class="inline">{{c1::else}}</code> clause can be used to {{c2::control flow based on the result of
+the expression}}. <code class="inline">{{c1::catch}}</code>, <code class="inline">{{c1::rescue}}</code>, and <code class="inline">{{c1::else}}</code> clauses work based on
+pattern matching (similar to the <code class="inline">case</code> special form).</p></section>
+
+

@@ -1,0 +1,7 @@
+<p>An <code class="inline">else</code> option can be given to modify what is being returned from
+<code class="inline">with</code> in the case of a failed match.</p>
+<p>The <code class="inline">else</code> block works like a <code class="inline">case</code> clause: it can {{c1::have multiple clauses}},
+and the first match {{c1::will be used}}. Variables bound inside <code class="inline">with</code>&nbsp;are {{c1::not available in the <code class="inline">else</code> block}}.</p>
+<p>If an <code class="inline">else</code> block is used and there are no matching clauses, {{c2::a <code class="inline">WithClauseError</code>
+exception is raised}}.</p>
+
