@@ -1,0 +1,19 @@
+<section class="detail" id="c:handle_params/3">
+
+  <div class="detail-header">
+    <h1 class="signature" translate="no">handle_params(unsigned_params, uri, socket)</h1>
+
+      <span class="note">(optional)</span>
+
+  </div>
+
+  <section class="docstring">
+
+<p>Invoked after mount and whenever there is a live patch event.</p><p>It receives the current <code class="inline">{{c1::params}}</code>, including {{c1::parameters}} from
+the router, the current <code class="inline">{{c1::uri}}</code> from the client and the <code class="inline">{{c1::socket}}</code>.
+It is invoked {{c2::after mount}} or whenever there is a live navigation
+event caused by <a href="#push_patch/2" class="no-underline"><code class="inline">{{c2::push_patch/2}}</code></a> or <a href="Phoenix.LiveView.Helpers.html#live_patch/2" class="no-underline"><code class="inline">{{c2::Phoenix.LiveView.Helpers.live_patch/2}}</code></a>.</p><p>It must always return <code class="inline">{:noreply, socket}</code>, where <code class="inline">:noreply</code>
+means no additional information is sent to the client.</p>
+  </section>
+</section>
+
