@@ -1,0 +1,19 @@
+<section class="detail" id="c:handle_event/3">
+
+  <div class="detail-header">
+    <h1 class="signature" translate="no">handle_event(event, unsigned_params, socket)</h1>
+
+      <span class="note">(optional)</span>
+
+  </div>
+
+  <section class="docstring">
+
+<p>Invoked to {{c1::handle events sent by the client}}.</p><p>It receives the <code class="inline">event</code> name, the event payload as a map,
+and the socket.</p><p>It must return <code class="inline">{{c2::{:noreply, socket}}}</code>, where <code class="inline">{{c2:::noreply}}</code> means
+no additional information is sent to the client, or
+<code class="inline">{{c2::{:reply, map(), socket}}}</code>, where the given <code class="inline">{{c2::map()}}</code> is encoded
+and {{c2::sent as a reply to the client}}.</p>
+  </section>
+</section>
+
