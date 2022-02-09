@@ -1,0 +1,33 @@
+<section class="detail" id="c:mount/3">
+
+  <div class="detail-header">
+    <h1 class="signature" translate="no">mount(params, session, socket)</h1>
+
+  </div>
+
+  <section class="docstring">
+
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre translate="no">mount(
+  params :: <a href="#t:unsigned_params/0">unsigned_params</a>() | :not_mounted_at_router,
+  session :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>(),
+  socket :: <a href="Phoenix.LiveView.Socket.html#t:t/0">Phoenix.LiveView.Socket.t</a>()
+) ::
+  {:ok, <a href="Phoenix.LiveView.Socket.html#t:t/0">Phoenix.LiveView.Socket.t</a>()}
+  | {:ok, <a href="Phoenix.LiveView.Socket.html#t:t/0">Phoenix.LiveView.Socket.t</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">keyword</a>()}</pre>
+
+      </div>
+
+<p>The LiveView entry-point.</p><p>For each LiveView in the root of a template, <code class="inline">mount/3</code> is invoked twice:
+once to do the initial page load and again to establish the live socket.</p><p>It expects three arguments:</p><ul><li><code class="inline">params</code> - a map of string keys which contain public information that
+can be set by the user. The map contains the query params as well as any
+router path parameter. If the LiveView was not mounted at the router,
+this argument is the atom <code class="inline">:not_mounted_at_router</code></li><li><code class="inline">session</code> - the connection session</li><li><code class="inline">socket</code> - the LiveView socket</li></ul><p>It must return either <code class="inline">{:ok, socket}</code> or <code class="inline">{:ok, socket, options}</code>, where
+<code class="inline">options</code> is one of:</p><ul><li><p><code class="inline">:temporary_assigns</code> - a keyword list of assigns that are temporary
+and must be reset to their value after every render. Note that once
+the value is reset, it won't be re-rendered again until it is explicitly
+assigned</p></li><li><p><code class="inline">:layout</code> - the optional layout to be used by the LiveView</p></li></ul>
+  </section>
+</section>
