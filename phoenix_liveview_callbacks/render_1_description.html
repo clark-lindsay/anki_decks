@@ -1,0 +1,25 @@
+<section class="detail" id="c:render/1">
+
+  <div class="detail-header">
+    <h1 class="signature" translate="no">render(assigns)</h1>
+  </div>
+
+  <section class="docstring">
+
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre translate="no">render(assigns :: <a href="Phoenix.LiveView.Socket.html#t:assigns/0">Phoenix.LiveView.Socket.assigns</a>()) ::
+  <a href="Phoenix.LiveView.Rendered.html#t:t/0">Phoenix.LiveView.Rendered.t</a>()</pre>
+
+      </div>
+
+<p>If you define this function, it must return a template
+defined via {{c1::the <code class="inline">Phoenix.LiveView.Helpers.sigil_H/2</code>}}.</p><p>If you don't define this function, LiveView will attempt
+to {{c1::render a template in the same directory as your LiveView}}.
+For example, if you have a LiveView named <code class="inline">MyApp.MyCustomView</code>
+inside <code class="inline">lib/my_app/live_views/my_custom_view.ex</code>, Phoenix
+will {{c1::look for a template at <code class="inline">lib/my_app/live_views/my_custom_view.html.heex</code>}}.</p>
+  </section>
+</section>
+
