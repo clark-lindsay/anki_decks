@@ -1,0 +1,9 @@
+<p>The only restrictions when creating anonymous functions with the capture operator <code class="inline">&amp;/1</code> is that at
+least one {{c1::placeholder must be present}}, i.e. it must contain at least
+<code class="inline">{{c1::&amp;1}}</code>, and that {{c1::block expressions}} are not supported:</p>
+<pre><code class="makeup elixir" translate="no"><span class="c1"># {{c1::No placeholder}}, fails to compile.</span><span class="w">
+</span><span class="o">&amp;</span><span class="p" data-group-id="0871213795-1">(</span><span class="ss">:foo</span><span class="p" data-group-id="0871213795-1">)</span><span class="w">
+
+</span><span class="c1"># {{c1::Block expression}}, fails to compile.</span><span class="w">
+</span><span class="o">&amp;</span><span class="p" data-group-id="0871213795-2">(</span><span class="ni">&amp;1</span><span class="p">;</span><span class="w"> </span><span class="ni">&amp;2</span><span class="p" data-group-id="0871213795-2">)</span></code></pre>
+
